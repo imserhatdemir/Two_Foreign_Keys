@@ -1,0 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EntityLayer.Concrete
+{
+    public class Match
+    {
+        [Key]
+        public int MatvhID { get; set; }
+        public int? HomeTeamID { get; set; }
+        public int? GuestTeamID { get; set; }
+        public DateTime MatchDate { get; set; }
+        public string Stadium { get; set; }
+        public Team HomeTeam { get; set; }
+        public Team GuestTeam { get; set; }
+    }
+}
